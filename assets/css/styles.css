@@ -36,8 +36,8 @@
 /* Location pins styles for the map */
 .map-pin {
     position: absolute;
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
     background-image: url("../images/red-pin.svg");
     background-size: contain;
     background-repeat: no-repeat;
