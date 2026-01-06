@@ -10,5 +10,88 @@
 }
 
 .hero-text {
-    margin-top: 50px; 
+    margin-top: 50px;
+}
+
+.cornwall-map {
+    display: flex;
+    justify-content: center;
+    padding: 4rem 1rem;
+    background: #e1dfe1; /* match wireframe grey */
+}
+
+/* Wrapper for creating positioning context for our map pins */
+.map-wrapper {
+    position: relative;
+    max-width: 800px;
+    width: 100%;
+}
+
+.map-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Location pins styles for the map */
+.map-pin {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-image: url("../images/red-pin.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+    background-color: transparent;
+    transform: translate(
+        -50%,
+        -100%
+    ); /* Center the pin horizontally and position the tip at the location */
+    cursor: pointer;
+}
+
+/* Modal base */
+.map-modal {
+    position: fixed;
+    inset: 0;
+    display: none; /* hidden by default */
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+/* Backdrop */
+.map-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal card */
+.map-modal-content {
+    position: relative;
+    background: #ffffff;
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+    max-width: 320px;
+    width: 90%;
+    z-index: 1;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+}
+
+.map-modal-close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.75rem;
+    border: none;
+    background: transparent;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Show modal when .is-open is applied */
+.map-modal.is-open {
+    display: flex;
 }
