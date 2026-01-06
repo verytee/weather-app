@@ -1,0 +1,14 @@
+.hero-image {
+    background-image: url("../images/hero1.webp");
+    background-color: #ffffff;
+    height: 30vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero-text {
+    margin-top: 50px; 
+}
