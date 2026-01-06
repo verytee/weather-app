@@ -1,3 +1,4 @@
+/* Hero section */
 .hero-image {
     background-image: url("../images/hero1.webp");
     background-color: #ffffff;
@@ -13,11 +14,36 @@
     margin-top: 50px;
 }
 
+/* Cornwall map section */
 .cornwall-map {
-    display: flex;
-    justify-content: center;
     padding: 4rem 1rem;
     background: #e1dfe1; /* match wireframe grey */
+}
+
+/* Overlap: assume first column is text, second is map */
+.cornwall-map .row > div:last-child {
+    position: relative;
+    margin-left: -4rem; /* adjust for more/less overlap */
+    z-index: 1;
+}
+
+/* Keep map title text above the map */
+.cornwall-map h2,
+.cornwall-map p {
+    position: relative;
+    z-index: 2;
+}
+
+/* Map title styling */
+.map-title {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+}
+
+.map-subtitle {
+    color: #6c6c6c;
+    max-width: 22rem;
 }
 
 /* Wrapper for creating positioning context for our map pins */
@@ -94,4 +120,11 @@
 /* Show modal when .is-open is applied */
 .map-modal.is-open {
     display: flex;
+}
+
+/* Responsive: remove overlap on small screens */
+@media (max-width: 767.98px) {
+    .cornwall-map .row > div:last-child {
+        margin-left: 0;
+    }
 }
