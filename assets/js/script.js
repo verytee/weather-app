@@ -34,7 +34,7 @@ backdrop.addEventListener("click", closeModal);
 
 const API_KEY = "5cf33e4c-ea2f-11f0-b5c3-0242ac130003-5cf33eb0-ea2f-11f0-b5c3-0242ac130003";
 
-const USE_MOCK = false; // true = local JSON, false = real API
+const USE_MOCK = true; // true = local JSON, false = real API
 
 // Coordinates for all pins so clicks always resolve
 const beaches = {
