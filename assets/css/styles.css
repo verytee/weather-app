@@ -151,40 +151,40 @@
 
 /* Individual card backgrounds */
 .card-1 {
-    background-image: url("beach1.jpg");
+    background-image: url("../images/watergate.webp");
 }
 .card-2 {
-    background-image: url("beach2.jpg");
+    background-image: url("../images/porthtowan.webp");
 }
 .card-3 {
-    background-image: url("beach3.jpg");
+    background-image: url("../images/gwithian.webp");
 }
 .card-4 {
-    background-image: url("beach4.jpg");
+    background-image: url("../images/sennen.webp");
 }
 .card-5 {
-    background-image: url("beach5.jpg");
+    background-image: url("../images/praasands.webp");
 }
 .card-6 {
-    background-image: url("beach6.jpg");
+    background-image: url("../images/fistral.webp");
 }
 .card-7 {
-    background-image: url("beach7.jpg");
+    background-image: url("../images/kennacksands.webp");
 }
 .card-8 {
-    background-image: url("beach8.jpg");
+    background-image: url("../images/fistral2.webp");
 }
 .card-9 {
-    background-image: url("beach9.jpg");
+    background-image: url("../images/watergate.webp");
 }
 .card-10 {
-    background-image: url("beach10.jpg");
+    background-image: url("../images/porthtowan.webp");
 }
 .card-11 {
-    background-image: url("beach11.jpg");
+    background-image: url("../images/gwithian.webp");
 }
 .card-12 {
-    background-image: url("beach12.jpg");
+    background-image: url("../images/sennen.webp");
 }
 
 /* Added overlay for better text readability */
@@ -218,6 +218,12 @@
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+.card-text {
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    margin-bottom: 0.75rem;
+}
+
 .carousel-indicators {
     position: relative;
     margin-top: 30px;
@@ -236,3 +242,4 @@
 .carousel-indicators .active {
     background-color: #000000;
 }
+
