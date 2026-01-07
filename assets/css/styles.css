@@ -243,3 +243,23 @@
     background-color: #000000;
 }
 
+/* Footer section */
+/* Mobile first (default) */
+.social-links {
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  .social-links {
+    text-align: left;
+  }
+}
+
+.about-section {
+  margin-top: 18rem;   /* pushes it DOWN */
+  padding: 3rem 0;    /* internal breathing room */
+}
+
+.hero {
+  min-height: 70vh;
+}
