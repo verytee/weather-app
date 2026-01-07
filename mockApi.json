@@ -1,0 +1,15 @@
+{
+  "hours": [
+    {
+      "swellHeight": {
+        "sg": 1.7
+      },
+      "swellPeriod": {
+        "sg": 11
+      },
+      "windSpeed": {
+        "sg": 6
+      }
+    }
+  ]
+}

@@ -93,14 +93,26 @@
   </section>
 
   <!-- Modal Features-->
-  <div id="mapModal" class="map-modal">
-    <div class="map-modal-backdrop"></div>
-    <div class="map-modal-content">
-      <button class="map-modal-close" aria-label="Close">&times;</button>
-      <h3 id="modalLocation"></h3>
-      <p id="modalDescription"></p>
+<!-- Modal -->
+<div id="mapModal" class="map-modal">
+  <div class="map-modal-backdrop"></div>
+
+  <div class="map-modal-content">
+    <button class="map-modal-close" aria-label="Close">&times;</button>
+
+    <h3 id="modalLocation"></h3>
+    <p id="modalDescription"></p>
+
+    <div class="surf-stats">
+      <p><strong>Swell:</strong> <span id="modalSwell">–</span> m</p>
+      <p><strong>Period:</strong> <span id="modalPeriod">–</span> s</p>
+      <p><strong>Wind:</strong> <span id="modalWind">–</span> m/s</p>
+      <p id="modalRating" class="fw-bold"></p>
     </div>
   </div>
+</div>
+
+
 
   <!-- footer -->
 
