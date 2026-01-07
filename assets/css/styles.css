@@ -11,13 +11,13 @@
 }
 
 .hero-text {
-    margin-top: 50px; 
+    margin-top: 50px;
 }
 
 /* Cornwall map section */
 .cornwall-map {
     padding: 4rem 1rem;
-    background: #e1dfe1; /* match wireframe grey */
+    background: #ffffff; /* match wireframe grey */
 }
 
 /* Overlap: assume first column is text, second is map */
@@ -127,4 +127,112 @@
     .cornwall-map .row > div:last-child {
         margin-left: 0;
     }
+}
+
+/* Carousel section */
+.carousel-inner {
+    padding: 20px 5rem 0;
+}
+
+.carousel-item .row {
+    justify-content: center;
+}
+
+.card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    min-height: 250px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Individual card backgrounds */
+.card-1 {
+    background-image: url("beach1.jpg");
+}
+.card-2 {
+    background-image: url("beach2.jpg");
+}
+.card-3 {
+    background-image: url("beach3.jpg");
+}
+.card-4 {
+    background-image: url("beach4.jpg");
+}
+.card-5 {
+    background-image: url("beach5.jpg");
+}
+.card-6 {
+    background-image: url("beach6.jpg");
+}
+.card-7 {
+    background-image: url("beach7.jpg");
+}
+.card-8 {
+    background-image: url("beach8.jpg");
+}
+.card-9 {
+    background-image: url("beach9.jpg");
+}
+.card-10 {
+    background-image: url("beach10.jpg");
+}
+.card-11 {
+    background-image: url("beach11.jpg");
+}
+.card-12 {
+    background-image: url("beach12.jpg");
+}
+
+/* Added overlay for better text readability */
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.card-title {
+    color: white;
+    font-weight: 600;
+    margin-bottom: 4rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-indicators {
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    background-color: #d0d0d0;
+    border: none;
+    opacity: 1;
+}
+
+.carousel-indicators .active {
+    background-color: #000000;
 }
