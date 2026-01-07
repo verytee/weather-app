@@ -110,24 +110,162 @@
   </section>
 
   <!-- Modal Features-->
-<!-- Modal -->
-<div id="mapModal" class="map-modal">
-  <div class="map-modal-backdrop"></div>
+  <!-- Modal -->
+  <div id="mapModal" class="map-modal">
+    <div class="map-modal-backdrop"></div>
 
-  <div class="map-modal-content">
-    <button class="map-modal-close" aria-label="Close">&times;</button>
+    <div class="map-modal-content">
+      <button class="map-modal-close" aria-label="Close">&times;</button>
 
-    <h3 id="modalLocation"></h3>
-    <p id="modalDescription"></p>
+      <h3 id="modalLocation"></h3>
+      <p id="modalDescription"></p>
 
-    <div class="surf-stats">
-      <p><strong>Swell:</strong> <span id="modalSwell">–</span> m</p>
-      <p><strong>Period:</strong> <span id="modalPeriod">–</span> s</p>
-      <p><strong>Wind:</strong> <span id="modalWind">–</span> m/s</p>
-      <p id="modalRating" class="fw-bold"></p>
+      <div class="surf-stats">
+        <p><strong>Swell:</strong> <span id="modalSwell">–</span> m</p>
+        <p><strong>Period:</strong> <span id="modalPeriod">–</span> s</p>
+        <p><strong>Wind:</strong> <span id="modalWind">–</span> m/s</p>
+        <p id="modalRating" class="fw-bold"></p>
+      </div>
     </div>
   </div>
-</div>
+
+  <!-- Carousel -->
+  <div id="cardCarousel" class="carousel slide" data-bs-ride="false">
+    <div class="carousel-inner">
+
+      <!-- Slide 1 - Cards 1-4 -->
+      <div class="carousel-item active">
+        <div class="row g-3">
+          <div class="col-md-3 col-6">
+            <div class="card card-1">
+              <div class="card-body">
+                <h6 class="card-title">Beach Name 1</h6>
+                <button class="btn btn-dark btn-sm">View More</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-6">
+            <div class="card card-2">
+              <div class="card-body">
+                <h6 class="card-title">Beach Name 2</h6>
+                <button class="btn btn-dark btn-sm">View More</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-6">
+            <div class="card card-3">
+              <div class="card-body">
+                <h6 class="card-title">Beach Name 3</h6>
+                <button class="btn btn-dark btn-sm">View More</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-6">
+            <div class="card card-4">
+              <div class="card-body">
+                <h6 class="card-title">Beach Name 4</h6>
+                <button class="btn btn-dark btn-sm">View More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 - Cards 5-8 -->
+      <div class="carousel-item">
+        <div class="row g-3">
+          <div class="col-md-3 col-6">
+            <div class="card card-5">
+              <div class="card-body">
+                <h6 class="card-title">Beach Name 5</h6>
+                <button class="btn btn-dark btn-sm">View More</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-6">
+            <div class="card card-6">
+              <div class="card-body">
+                <h6 class="card-title">Beach Name 6</h6>
+                <button class="btn btn-dark btn-sm">View More</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-6">
+            <div class="card card-7">
+              <div class="card-body">
+                <h6 class="card-title">Beach Name 7</h6>
+                <button class="btn btn-dark btn-sm">View More</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-6">
+            <div class="card card-8">
+              <div class="card-body">
+                <h6 class="card-title">Beach Name 8</h6>
+                <button class="btn btn-dark btn-sm">View More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 - Cards 9-12 -->
+      <div class="carousel-item">
+        <div class="row g-3">
+          <div class="col-md-3 col-6">
+            <div class="card card-9">
+              <div class="card-body">
+                <h6 class="card-title">Beach Name 9</h6>
+                <button class="btn btn-dark btn-sm">View More</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-6">
+            <div class="card card-10">
+              <div class="card-body">
+                <h6 class="card-title">Beach Name 10</h6>
+                <button class="btn btn-dark btn-sm">View More</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-6">
+            <div class="card card-11">
+              <div class="card-body">
+                <h6 class="card-title">Beach Name 11</h6>
+                <button class="btn btn-dark btn-sm">View More</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-6">
+            <div class="card card-12">
+              <div class="card-body">
+                <h6 class="card-title">Beach Name 12</h6>
+                <button class="btn btn-dark btn-sm">View More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Carousel indicators (dots) -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+        aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+  </div>
 
 
   <!-- Bootstrap bundle JS -->
