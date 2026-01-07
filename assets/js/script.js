@@ -34,17 +34,17 @@ backdrop.addEventListener("click", closeModal);
 
 const API_KEY = "5cf33e4c-ea2f-11f0-b5c3-0242ac130003-5cf33eb0-ea2f-11f0-b5c3-0242ac130003";
 
-const USE_MOCK = true; // 👈 true = local JSON, false = real API
+const USE_MOCK = false; // true = local JSON, false = real API
 
+// Coordinates for all pins so clicks always resolve
 const beaches = {
-  "Fistral Beach": {
-    lat: 50.4169,
-    lng: -5.0983
-  },
-  "Charlestown Beach": {
-    lat: 50.3399,
-    lng: -4.7924
-  }
+  "Watergate Bay": { lat: 50.4426, lng: -5.0592 },
+  "Porthtowan": { lat: 50.2724, lng: -5.2424 },
+  "Gwithian Beach": { lat: 50.2137, lng: -5.4021 },
+  "Sennen Cove": { lat: 50.0764, lng: -5.6939 },
+  "Praa Sands": { lat: 50.0936, lng: -5.3924 },
+  "Fistral Beach": { lat: 50.4169, lng: -5.0983 },
+  "Kennack Sands": { lat: 50.0118, lng: -5.0995 }
 };
 
 
@@ -71,7 +71,7 @@ async function loadSurfForBeach(beachName) {
     let data;
 
     if (USE_MOCK) {
-      const res = await fetch("./mockAPI.json");
+      const res = await fetch("./mockApi.json");
       if (!res.ok) throw new Error("Mock data failed");
       data = await res.json();
     } else {
