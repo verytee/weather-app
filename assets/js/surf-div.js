@@ -28,22 +28,26 @@ function haversine(lat1, lon1, lat2, lon2) {
   return R * c;
 }
 
+// km → miles
+const kmToMiles = km => km * 0.621371;
+
 // 📍 Get location (with fallback)
 function getPosition() {
   return new Promise((resolve) => {
-    const fallback = { lat: 50.059, lon: -5.65393};
+    const fallback = { lat: 50.059, lon: -5.65393 };
 
     if (!navigator.geolocation) {
-      resolve(fallback);
+      resolve({ ...fallback, usedFallback: true });
       return;
     }
 
     navigator.geolocation.getCurrentPosition(
-      (pos) => resolve({
+      pos => resolve({
         lat: pos.coords.latitude,
-        lon: pos.coords.longitude
+        lon: pos.coords.longitude,
+        usedFallback: false
       }),
-      () => resolve(fallback),
+      () => resolve({ ...fallback, usedFallback: true }),
       { enableHighAccuracy: true, timeout: 5000 }
     );
   });
@@ -62,7 +66,7 @@ function findNearestBeaches(userLat, userLon) {
 
 // 🌊 Fetch surf data from Stormglass
 async function getSurfData(lat, lon) {
-  const apiKey = "faa183f4-ea4a-11f0-a148-0242ac130003-faa184bc-ea4a-11f0-a148-0242ac130003"; 
+  const apiKey = "faa183f4-ea4a-11f0-a148-0242ac130003-faa184bc-ea4a-11f0-a148-0242ac130003";
   const params = "waveHeight,swellHeight,windSpeed";
   const url = `https://api.stormglass.io/v2/weather/point?lat=${lat}&lng=${lon}&params=${params}`;
 
@@ -78,7 +82,7 @@ async function getSurfData(lat, lon) {
 
     const now = hours[0];
 
- // Helper to get first available source
+    // Helper to get first available source
     const getValue = (param) => {
       if (!param) return "N/A";
       const sources = Object.values(param);
@@ -95,27 +99,39 @@ async function getSurfData(lat, lon) {
   }
 }
 
-// 🖱 Button click
-document.getElementById("locBtn").onclick = async () => {
-  const output = document.getElementById("output");
-  output.innerHTML = "Finding nearest beaches...";
+// Button logic
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("locBtn").onclick = async () => {
+    const output = document.getElementById("output");
+    output.innerHTML = `<div class="status centered">Loading…</div>`;
 
-  const { lat, lon } = await getPosition();
-  const nearest = findNearestBeaches(lat, lon);
+    const { lat, lon, usedFallback } = await getPosition();
+    const nearest = findNearestBeaches(lat, lon);
 
-  let html = "<h3>Nearest beaches with live surf</h3><ul>";
+    const surfData = await Promise.all(
+      nearest.map(b => getSurfData(b.lat, b.lon))
+    );
 
-  for (const beach of nearest) {
-    const surf = await getSurfData(beach.lat, beach.lon);
-    html += `
-      <li>
-        <strong>${beach.name}</strong> – ${beach.distance.toFixed(2)} km<br>
-        🌊 Wave height: ${surf.waveHeight} m<br>
-        📈 Swell height: ${surf.swellHeight} m<br>
-        💨 Wind speed: ${surf.windSpeed} m/s
-      </li>`;
-  }
+    const statusMsg = usedFallback
+      ? "⚠️ Using fallback location (geolocation unavailable)"
+      : "📍 Location detected successfully";
 
-  html += "</ul>";
-  output.innerHTML = html;
-};
+    output.innerHTML = `
+      <div class="status centered">
+  ${statusMsg}
+</div>
+
+      <div class="beach-container">
+        ${nearest.map((b, i) => `
+          <div class="beach-card">
+            <h3>${b.name}</h3>
+            <p><strong>${kmToMiles(b.distance).toFixed(2)} mi away</strong></p>
+            <p>🌊 Wave: ${surfData[i].waveHeight} m</p>
+            <p>📈 Swell: ${surfData[i].swellHeight} m</p>
+            <p>💨 Wind: ${surfData[i].windSpeed} m/s</p>
+          </div>
+        `).join("")}
+      </div>
+    `;
+  };
+});
