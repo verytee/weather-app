@@ -101,15 +101,52 @@ async function getSurfData(lat, lon) {
 
 // Button logic
 document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("locBtn").onclick = async () => {
+  const btn = document.getElementById("locBtn");
+  if (!btn) return;
+
+  btn.onclick = async () => {
     const output = document.getElementById("output");
     output.innerHTML = `<div class="status centered">Loading…</div>`;
 
+    // 🧠 Check if this is a single-beach page
+    const beachLat = btn.dataset.lat;
+    const beachLon = btn.dataset.lon;
+    const beachName = btn.dataset.beachName;
+
+    // ===============================
+    // 🏖 SINGLE BEACH PAGE
+    // ===============================
+    if (beachLat && beachLon) {
+      const surf = await getSurfData(Number(beachLat), Number(beachLon));
+
+      output.innerHTML = `
+        <div class="status centered">
+          📍 Showing surf for ${beachName}
+        </div>
+
+        <div class="beach-container">
+          <div class="beach-card">
+            <h3>${beachName}</h3>
+            <p>🌊 Wave: ${surf.waveHeight} m</p>
+            <p>📈 Swell: ${surf.swellHeight} m</p>
+            <p>💨 Wind: ${surf.windSpeed} m/s</p>
+          </div>
+        </div>
+      `;
+      return;
+    }
+
+    // ===============================
+    // 🌍 HOME PAGE (nearest beaches)
+    // ===============================
     const { lat, lon, usedFallback } = await getPosition();
     const nearest = findNearestBeaches(lat, lon);
 
     const surfData = await Promise.all(
-      nearest.map(b => getSurfData(b.lat, b.lon))
+      nearest.map(b => {
+        const beach = beaches.find(x => x.name === b.name);
+        return getSurfData(beach.lat, beach.lon);
+      })
     );
 
     const statusMsg = usedFallback
@@ -117,9 +154,7 @@ document.addEventListener("DOMContentLoaded", () => {
       : "📍 Location detected successfully";
 
     output.innerHTML = `
-      <div class="status centered">
-  ${statusMsg}
-</div>
+      <div class="status centered">${statusMsg}</div>
 
       <div class="beach-container">
         ${nearest.map((b, i) => `
@@ -135,3 +170,4 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
   };
 });
+
