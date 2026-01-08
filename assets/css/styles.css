@@ -4,10 +4,16 @@
         url("../images/hero1.webp");
     min-height: 100vh;
     width: 100%;
+    height: 100vh;
+    width: auto;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    border-radius: 20px;
+    margin-top: 80px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .hero-text {
@@ -24,11 +30,15 @@
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url("../images/gwithian.webp");
     height: 100vh;
-    width: 100%;
+    width: auto;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    border-radius: 20px;
+    margin-top: 80px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .hero-watergatebay {
@@ -40,6 +50,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    border-radius: 20px;
+    margin-top: 80px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 /*Text Sizes*/
@@ -274,6 +288,7 @@ h1 {
     position: relative;
     z-index: 2;
     text-align: center;
+    min-height: 300px;
 }
 
 .card-title {
@@ -363,47 +378,7 @@ footer .container {
     min-height: 70vh;
 }
 
-/* find my surf card styling */
-.beach-container {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.beach-card {
-    background: #ffffff;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 15px;
-    width: 260px;
-    box-sizing: border-box;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    /* subtle depth */
-}
-
-/* 📱 Mobile */
-@media (max-width: 600px) {
-    .beach-container {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .beach-card {
-        width: auto;
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-}
-
-
-.status {
-    color: #ffffff;
-    margin-bottom: 20px;
-    padding: 10px;
-    font-weight: bold;
-}
-
-.centered {
-    text-align: center;
+/* Navbar background colour */
+.navbar {
+    background-color: #ffffff;
 }
