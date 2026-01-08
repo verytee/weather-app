@@ -244,22 +244,37 @@
 }
 
 /* Footer section */
-/* Mobile first (default) */
 .social-links {
-  text-align: center;
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+  margin-top: 0rem;
 }
 
-@media (min-width: 992px) {
-  .social-links {
-    text-align: left;
-  }
+.social-links a {
+  color: #000;
+  font-size: 1.8rem;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
-.about-section {
-  margin-top: 18rem;   /* pushes it DOWN */
-  padding: 3rem 0;    /* internal breathing room */
+.social-links a:hover {
+  color: #555;
+  transform: translateY(-2px);
 }
 
-.hero {
-  min-height: 70vh;
+#logo-footer {
+   margin-top: 0rem;
+}
+
+#logo-footer .container{
+   margin-left: 0rem;
+}
+
+.footer {
+    margin-top: 4rem;
+}
+
+footer .container {
+  padding-right: 3rem;
+  padding-left: 3rem;
 }
