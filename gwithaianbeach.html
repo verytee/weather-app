@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gwithian</title>
+
+    <!--Link to faviocons -->
+    <link rel="icon" type="image/x-icon" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon-16x16.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="site-header">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+
+                <!-- Brand -->
+                <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                    <img src="assets/images/Cornwall_surf_logo_3.webp" alt="Surf logo" class="logo" width="20"
+                        height="20">
+                    <span class="brand-text">Tonnow (Cornish Surf)</span>
+                </a>
+
+                <!-- Burger -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                    aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Nav links -->
+                <div class="collapse navbar-collapse main-nav" id="mainNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero section -->
+    <section id="hero" class="hero-gwithian">
+        <div class="hero-overlay d-flex flex-column justify-content-center align-items-center text-center">
+            <h1 class="hero-text">Gwithian</h1>
+            <h3 class="display-7">Check the surf conditions</h3>
+            <a href="#map-section" class="btn btn-primary mt-3">Find your surf!</a>
+        </div>
+    </section>
+
+    <!-- Beach Title & Sub Text -->
+    <div class="Beach-map-text container text-left mt-5">
+        <h2 class="beach-title">Why you'll love it here!</h2><br>
+        <p class="beach-description">
+            Gwithian offers miles of golden sand, natural shelter from the wind near the cliffs, and an excellent rock
+            pool area, making it a standout family-friendly beach on Cornwall’s north coast. The surf spot known as
+            “Sheep Dips” is a large natural pool formed between two substantial rock outcrops, deep in the middle,
+            gently sloping at the sides, and noticeably warmer than the open Atlantic.
+            ​<br><br>
+
+            There are numerous additional rock pools around the section of beach near the steps, providing plenty of
+            opportunity for exploration and rockpooling. This part of the coast is particularly attractive for visitors
+            looking to combine classic beach time with something a little more adventurous.
+            ​<br><br>
+
+            Gwithian is also an ideal location for learning to surf, being slightly more sheltered than neighbouring
+            Godrevy, which usually results in more forgiving waves. Together with a well-staffed lifeguard service
+            during the main season, it is a great place to get in the water for both younger and older visitors alike.
+            ​<br><br>
+
+            In addition to its reputation as a surf beach, Gwithian is a long-standing favourite with windsurfers and
+            kitesurfers. Its relatively exposed aspect and predominance of cross-shore winds create consistently
+            favourable conditions for these sports throughout much of the year.
+
+        </p>
+    </div>
+
+    <!-- Beach Features -->
+    <!-- Top Row -->
+    <div>
+        <div class="container py-5">
+            <div class="row justify-content-center g-4 text-center">
+                <div class="col-12 col-md-3">
+                    <h3 class="mb-2">Also known as:</h3>
+                    <p class="mb-0">Gwithian Towans</p>
+                </div>
+
+                <div class="col-12 col-md-3">
+                    <h3 class="mb-2">Postcode</h3>
+                    <p class="mb-0">TR27 5BT</p>
+                </div>
+
+                <div class="col-12 col-md-3">
+                    <h3 class="mb-2">Type of beach</h3>
+                    <p class="mb-0">Sandy beach with rock pools</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bottom Row -->
+    <div>
+        <div class="container py-5">
+            <div class="row justify-content-center g-4 text-center">
+                <div class="col-12 col-md-3">
+                    <h3 class="mb-2">OS grid ref</h3>
+                    <p class="mb-0">SW 5780 4138</p>
+                </div>
+
+                <div class="col-12 col-md-3">
+                    <h3 class="mb-2">Lifeguard service</h3>
+                    <p class="mb-0">Well covered during summer months (5 May-30 September), Easter Bank Holiday weekend
+                        and wekkends during October</p>
+                </div>
+
+                <div class="col-12 col-md-3">
+                    <h3 class="mb-2">Facilities</h3>
+                    <p class="mb-0">There is the Sunset Surf cafe and beach shop by the main car park plus another
+                        couple of places set back in the dunes including the Jam Pot Café - a former 19th century
+                        coastguard lookout with great views across the bay.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Live Feed of Gwithian Beach -->
+    <div class="Beach-map-text container text-center mt-5">
+        <h2 class="feed-title">Live Feed</h2>
+        <br></br>
+        <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/X2zejrbMbRQ"
+                title="Gwithian Beach - Cornwall - Surfers, Sunset and Amazing Rock Formations - 4K Video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</body>
