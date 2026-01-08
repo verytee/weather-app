@@ -499,3 +499,26 @@ footer .container {
 .centered {
     text-align: center;
 }
+
+.surfboard-btn {
+  padding: 12px 40px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(135deg, #5c91c6, #4fa3b2);
+  border: none;
+  border-radius: 999px; /* 🔑 surfboard shape */
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.surfboard-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.surfboard-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+}
