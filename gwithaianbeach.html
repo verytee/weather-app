@@ -26,7 +26,7 @@
 <body>
 
     <!-- Navbar -->
-    <header class="site-header">
+   <header class="site-header">
         <nav class="navbar fixed-top navbar-expand-lg navbar-light">
             <div class="container-fluid">
 
@@ -34,7 +34,7 @@
                 <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
                     <img src="assets/images/Cornwall_surf_logo_3.webp" alt="Surf logo" class="logo" width="20"
                         height="20">
-                    <span class="brand-text">Tonnow (Cornish Surf)</span>
+                    <span class="brand-text">Surf Kernow</span>
                 </a>
 
                 <!-- Burger -->
@@ -50,7 +50,7 @@
                             <a class="nav-link active" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
+                            <a class="nav-link" href="#map-section">Surf Map</a>
                         </li>
                     </ul>
                 </div>
@@ -64,7 +64,11 @@
         <div class="hero-overlay d-flex flex-column justify-content-center align-items-center text-center">
             <h1 class="hero-text">Gwithian</h1>
             <h3 class="display-7">Check the surf conditions</h3>
-            <a href="#map-section" class="btn btn-primary mt-3">Find your surf!</a>
+            <button id="locBtn" class="surfboard-btn" data-beach-name="Gwithian" data-lat="50.226"
+                data-lon="-5.386">
+                Find my surf
+            </button>
+            <div id="output"></div>
         </div>
     </section>
 
@@ -188,7 +192,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Custom JS -->
-    <script src="assets/js/script.js"></script>
     <script src="assets/js/surf-div.js"></script>
 </body>
 
