@@ -2,7 +2,7 @@
 .hero-image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url("../images/hero1.webp");
-    min-height: 100vh;
+    min-height: 70vh;
     width: auto;
     background-position: center;
     background-repeat: no-repeat;
@@ -15,19 +15,25 @@
 }
 
 .hero-text {
-    margin-top: 14rem;
+    margin-top: 4rem;
     color: white;
 }
 
+#output {
+    margin-bottom: 30px;
+}
+
+/*Hero Header Sub text*/
 .display-7 {
     color: white;
+    margin-top: 10px;
 }
 
 /*Beach Hero Images*/
 .hero-gwithian {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url("../images/gwithian.webp");
-    height: 100vh;
+    height: 70vh;
     width: auto;
     background-position: center;
     background-repeat: no-repeat;
@@ -42,7 +48,7 @@
 .hero-watergatebay {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url("../images/watergate.webp");
-    height: 100vh;
+    height: 70vh;
     width: auto;
     background-position: center;
     background-repeat: no-repeat;
@@ -57,7 +63,7 @@
 .hero-porthtowan {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url("../images/porthtowan.webp");
-    height: 100vh;
+    height: 70vh;
     width: auto;
     background-position: center;
     background-repeat: no-repeat;
@@ -72,7 +78,7 @@
 .hero-sennen {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url("../images/sennen.webp");
-    height: 100vh;
+    height: 70vh;
     width: auto;
     background-position: center;
     background-repeat: no-repeat;
@@ -87,7 +93,7 @@
 .hero-praasands {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url("../images/praasands.webp");
-    height: 100vh;
+    height: 70vh;
     width: auto;
     background-position: center;
     background-repeat: no-repeat;
@@ -102,7 +108,7 @@
 .hero-fistral {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url("../images/fistral.webp");
-    height: 100vh;
+    height: 70vh;
     width: auto;
     background-position: center;
     background-repeat: no-repeat;
@@ -117,7 +123,7 @@
 .hero-kennack {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url("../images/kennacksands.webp");
-    height: 100vh;
+    height: 70vh;
     width: auto;
     background-position: center;
     background-repeat: no-repeat;
@@ -161,7 +167,7 @@ h1 {
 }
 
 /* Overlap: assume first column is text, second is map */
-.cornwall-map .row>div:last-child {
+.cornwall-map .row > div:last-child {
     position: relative;
     margin-left: -4rem;
     /* adjust for more/less overlap */
@@ -210,8 +216,7 @@ h1 {
     background-repeat: no-repeat;
     border: none;
     background-color: transparent;
-    transform: translate(-50%,
-            -100%);
+    transform: translate(-50%, -100%);
     /* Center the pin horizontally and position the tip at the location */
     cursor: pointer;
 }
@@ -265,7 +270,7 @@ h1 {
 
 /* Responsive: remove overlap on small screens */
 @media (max-width: 767.98px) {
-    .cornwall-map .row>div:last-child {
+    .cornwall-map .row > div:last-child {
         margin-left: 0;
     }
 }
@@ -501,24 +506,25 @@ footer .container {
 }
 
 .surfboard-btn {
-  padding: 12px 40px;
-  font-size: 1rem;
-  font-weight: bold;
-  color: #fff;
-  background: linear-gradient(135deg, #5c91c6, #4fa3b2);
-  border: none;
-  border-radius: 999px; /* 🔑 surfboard shape */
-  cursor: pointer;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+    padding: 12px 40px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(135deg, #5c91c6, #4fa3b2);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 20px;
 }
 
 .surfboard-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .surfboard-btn:active {
-  transform: translateY(0);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+    transform: translateY(0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
 }
