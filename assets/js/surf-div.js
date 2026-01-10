@@ -8,7 +8,7 @@ const beaches = [
   { name: "Porthmeor Beach, St Ives", lat: 50.1785, lon: -5.5986 },
   { name: "Sennen Beach", lat: 50.076, lon: -5.707 },
   { name: "Porthlevan", lat: 50.086, lon: -5.313 },
-  { name: "Godrevy Beach & Gwithian Towans", lat: 50.226, lon: -5.386 },,
+  { name: "Godrevy Beach & Gwithian Towans", lat: 50.226, lon: -5.386 },
   { name: "Praa Sands", lat: 50.1039, lon: -5.3905 },
   { name: "Crooklets, Bude", lat: 50.8306, lon: -4.5451 },
 ];
